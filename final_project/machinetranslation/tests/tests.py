@@ -1,18 +1,19 @@
 import unittest
+from machinetranslation import translator
 
-from translator import englishToFrench
-from translator import frenchToEnglish
+from translator import english_to_french
+from translator import french_to_english
 
-class test_englishToFrench(unittest.TestCase):
+class test_english_to_french(unittest.TestCase):
     def test1(self):
-        self.assertEqual(englishToFrench(englishText='Hello'),'Bonjour')
-        self.assertEqual(englishToFrench(englishText='This is a test unit'),'Ceci est un test.')
-        self.assertNotEqual(englishToFrench(englishText='Good night'),'Bonjour')
+        self.assertEqual(english_to_french(english_text='Hello'),'Bonjour')
+        self.assertEqual(english_to_french(english_text='This is a test unit'),'Ceci est un test.')
+        self.assertNotEqual(english_to_french(english_text='Good night'),'Bonjour')
 
-class test_englishToFrench(unittest.TestCase):
+class test_french_to_english(unittest.TestCase):
     def test2(self):
-        self.assertEqual(frenchToEnglish(frenchText='Ceci est un test'),'test the board')
-        self.assertEqual(frenchToEnglish(frenchText='Bonjour'),'Hello')
-        self.assertNotEqual(frenchToEnglish(frenchText='je veux de glaçons'),'I want ice cream')
+        self.assertEqual(french_to_english(frenchText='Ceci est un test'),'test the board')
+        self.assertEqual(french_to_english(frenchText='Bonjour'),'Hello')
+        self.assertNotEqual(french_to_english(frenchText='je veux de glaçons'),'I want ice cream')
 
 unittest.main()
