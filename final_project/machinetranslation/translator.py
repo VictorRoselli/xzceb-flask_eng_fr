@@ -10,3 +10,6 @@ def frenchToEnglish(frenchText):
     mytranslator = MyMemoryTranslator(source = 'fr',target = 'en')
     englishText = mytranslator.translate(frenchText)
     return englishText
+
+
+
