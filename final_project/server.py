@@ -15,7 +15,7 @@ def english_to_french():
     Connects the end point to english to french function
     '''
     text_to_translate = request.args.get('textToTranslate')
-    my_translator = MyMemoryTranslator(source = 'en',target = 'fr')
+    my_translator = MyMemoryTranslator(source = 'en-GB',target = 'fr-FR')
     french_text = my_translator.translate(text_to_translate)
     return french_text
 
@@ -25,7 +25,7 @@ def french_to_english():
     Connects the end point to french to english function
     '''
     text_to_translate = request.args.get('textToTranslate')
-    my_translator = MyMemoryTranslator(source = 'fr',target = 'en')
+    my_translator = MyMemoryTranslator(source = 'fr-FR',target = 'en-GB')
     english_text = my_translator.translate(text_to_translate)
     return english_text
 
